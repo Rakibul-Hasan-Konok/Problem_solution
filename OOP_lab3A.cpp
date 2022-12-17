@@ -1,4 +1,4 @@
-//link-https://vjudge.net/contest/534298#problem
+//link-https://vjudge.net/contest/534298#problem -
 #include <bits/stdc++.h>
 
 using namespace std;
