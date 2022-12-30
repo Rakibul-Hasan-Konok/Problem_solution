@@ -2,15 +2,17 @@
 using namespace std;
 int main()
 {
-    string s;
-    cin>>s;
-     cout<<(char) toupper(s[0]);
-    for(int i=1;i<s.size();i++){
-        if(s[i]=='s') cout<<"$";
-        else if(s[i]=='i') cout<<"!";
-        else if(s[i]=='o') cout<<"()";
-         else cout<<s[i];
-    }
-    cout<<"."<<endl;
+    int year;
+    cin>>year;
+    if (year <= 0)
+      cout << "0"
+         <<endl;
+   else if (year <= 100)
+      cout << "1\n";
+   else if (year % 100 == 0)
+      cout << year/ 100 <<endl;
+   else
+      cout << year/ 100 + 1 <<endl;
+   
     
 }
