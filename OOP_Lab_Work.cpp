@@ -1,21 +1,37 @@
-
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
-
-int Zeros(int n)
-{
-	if (n < 0) 
-		return -1;
-	int count = 0;
-	for (int i = 5; n / i >= 1; i *= 5)
-		count += n / i;
-
-	return count;
-}
 int main()
 {
-	int n;
-    cin>>n;
-	cout <<Zeros(n)<<endl;
-	return 0;
+int n;
+cin>>n;
+while(n!=0){
+if(n%500==0){
+  cout<<"500"<<" ";
+  n=n-500;}
+else if(n%100==0){
+    cout<<"100"<<" ";
+  n=n-100;
 }
+else if(n%50==0){
+    cout<<"50"<<" ";
+  n=n-50;
+}
+else if(n%10==0){
+    cout<<"10"<<" ";
+  n=n-10;
+}
+else if(n%5==0){
+    cout<<"5"<<" ";
+  n=n-5;
+}
+else{
+    cout<<"1"<<" ";
+  n=n-1;
+}
+}
+cout<<endl;
+
+}
+
+
+
