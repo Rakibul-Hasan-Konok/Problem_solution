@@ -1,18 +1,21 @@
-#include <bits/stdc++.h>
+
+#include <iostream>
 using namespace std;
+
+int Zeros(int n)
+{
+	if (n < 0) 
+		return -1;
+	int count = 0;
+	for (int i = 5; n / i >= 1; i *= 5)
+		count += n / i;
+
+	return count;
+}
 int main()
 {
-    int year;
-    cin>>year;
-    if (year <= 0)
-      cout << "0"
-         <<endl;
-   else if (year <= 100)
-      cout << "1\n";
-   else if (year % 100 == 0)
-      cout << year/ 100 <<endl;
-   else
-      cout << year/ 100 + 1 <<endl;
-   
-    
+	int n;
+    cin>>n;
+	cout <<Zeros(n)<<endl;
+	return 0;
 }
